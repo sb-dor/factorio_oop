@@ -1,0 +1,3 @@
+class Iron implements Minerals {
+
+}
