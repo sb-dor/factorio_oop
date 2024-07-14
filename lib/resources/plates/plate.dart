@@ -1,3 +1,3 @@
 import 'package:factorio_oop/resource.dart';
 
-abstract class Mineral extends Resource {}
+abstract base class Plate extends Resource {}
