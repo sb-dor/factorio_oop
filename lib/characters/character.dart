@@ -15,9 +15,12 @@ abstract base class Character with Inventory {
     // init of inventory considering what kind of character the player is
     initInventory(slotLength: slotLength, weaponSlotLength: weaponSlotLength);
     //
+    // you can event right the "slotLength" instead of "slots.length"
     for (int i = 0; i < slots.length; i++) {
       slots.add(Slot());
     }
+
+    // you can event right the "weaponSlotLength" instead of "weaponSlot.length"
     for (int i = 0; i < weaponSlot.length; i++) {
       weaponSlot.add(WeaponSlot());
     }

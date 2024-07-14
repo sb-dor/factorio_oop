@@ -30,7 +30,8 @@ void main() {
       character.addToSlot(ironChest);
 
       for (final each in character.slots.currentList) {
-        print("each slots: ${each?.resources.firstElementOrNull.runtimeType} | length: ${each?.resources.listLength}");
+        print(
+            "each slots: ${each?.resources.firstElementOrNull.runtimeType} | length: ${each?.resources.listLength}");
       }
     });
   });
