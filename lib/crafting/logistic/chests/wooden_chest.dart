@@ -17,8 +17,7 @@ final class WoodenChest extends Chest {
   @override
   Stream<Resource?> produce() async* {
     yield* super.produce();
-    await Future.delayed(produceDuration, () async* {
-      yield WoodenChest();
-    });
+    await Future.delayed(produceDuration);
+    yield WoodenChest();
   }
 }

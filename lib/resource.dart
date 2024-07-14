@@ -4,6 +4,6 @@
 abstract class Resource {
   @override
   String toString() {
-    return "Resource is -> $runtimeType";
+    return "Resource is: $runtimeType";
   }
 }

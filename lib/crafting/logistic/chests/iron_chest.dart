@@ -18,8 +18,7 @@ final class IronChest extends Chest {
   @override
   Stream<Resource?> produce() async* {
     yield* super.produce();
-    await Future.delayed(produceDuration, () async* {
-      yield IronChest();
-    });
+    await Future.delayed(produceDuration);
+    yield IronChest();
   }
 }

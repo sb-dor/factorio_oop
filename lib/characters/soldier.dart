@@ -1,5 +1,10 @@
 import 'package:factorio_oop/characters/character.dart';
+import 'package:factorio_oop/constants/constants.dart';
 
-base class Soldier extends Character {
-  Soldier() : super(slotLength: 50, weaponSlotLength: 4);
+final class Soldier extends Character {
+  Soldier()
+      : super(
+          slotLength: Constants.soldierSlotLength,
+          weaponSlotLength: Constants.soldierWeaponSlotLength,
+        );
 }

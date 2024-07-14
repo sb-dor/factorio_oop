@@ -6,7 +6,7 @@ import 'slots/slot.dart';
 import 'weapon_slot/weapon_slot.dart';
 
 mixin class Inventory {
-  // is required to use remember to use that
+  // is required, to use remember to use that
   void initInventory({int? slotLength, int? weaponSlotLength}) {
     //
     slots = ArrayGeneric<Slot>(slotLength ?? Constants.slotLength);
@@ -75,7 +75,7 @@ mixin class Inventory {
   ///    - If the list is empty, it adds the resource to the list and sets `resourceAdded` to `true`.
   /// 3. If the list is not empty, it checks two conditions:
   ///    - The first resource in the slot should be of the same type as the resource being added.
-  ///    - The length of the current list of resources in the slot should be less than the maximum allowed length (`Constants.slotLength`).
+  ///    - The length of the current list of resources in the slot should be less than the maximum allowed length (`Constants.resourcesLength`).
   ///    - If both conditions are satisfied, it adds the resource to the list and sets `resourceAdded` to `true`.
   /// 4. The function returns the value of `resourceAdded`, indicating whether the resource was successfully added to the slot.
   bool _addToSlotHelper(Resource? resource, int slotNumber) {
@@ -85,7 +85,7 @@ mixin class Inventory {
       resourceAdded = true;
     } else if (slots.currentList[slotNumber]?.resources.firstElementOrNull.runtimeType ==
             resource.runtimeType &&
-        (slots.currentList[slotNumber]?.resources.listLength ?? 0) < Constants.slotLength) {
+        (slots.currentList[slotNumber]?.resources.listLength ?? 0) < Constants.resourcesLength) {
       slots.currentList[slotNumber]?.resources.add(resource);
       resourceAdded = true;
     }
