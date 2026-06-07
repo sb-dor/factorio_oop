@@ -29,10 +29,9 @@ void main() {
       character.addToSlot(wood);
       character.addToSlot(ironChest);
 
-      for (final each in character.slots.currentList) {
-        print(
-            "each slots: ${each?.resources.firstElementOrNull.runtimeType} | length: ${each?.resources.listLength}");
-      }
+      expect(character.slots.currentList[0]?.resources.listLength, 2);
+      expect(character.slots.currentList[1]?.resources.listLength, 3);
+      expect(character.slots.currentList[2]?.resources.listLength, 1);
     });
   });
 }

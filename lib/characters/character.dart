@@ -8,10 +8,7 @@ abstract base class Character with Inventory {
 
   // whenever a character is created
   // a slot from inventory will be created with a character
-  Character({
-    required this.slotLength,
-    required this.weaponSlotLength,
-  }) {
+  Character({required this.slotLength, required this.weaponSlotLength}) {
     // init of inventory considering what kind of character the player is
     initInventory(slotLength: slotLength, weaponSlotLength: weaponSlotLength);
     //

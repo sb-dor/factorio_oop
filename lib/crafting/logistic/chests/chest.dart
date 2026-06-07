@@ -19,7 +19,9 @@ abstract base class Chest extends Crafting {
   @override
   Stream<Resource?> produce() async* {
     if (ingredients.listLength != ingredients.length) {
-      throw ArrayLengthException("Not enough ingredients to create $runtimeType chest");
+      throw ArrayLengthException(
+        "Not enough ingredients to create $runtimeType chest",
+      );
     }
   }
 }

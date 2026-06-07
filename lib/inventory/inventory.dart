@@ -11,7 +11,9 @@ mixin class Inventory {
     //
     slots = ArrayGeneric<Slot>(slotLength ?? Constants.slotLength);
 
-    weaponSlot = ArrayGeneric<WeaponSlot>(weaponSlotLength ?? Constants.weaponSlotLength);
+    weaponSlot = ArrayGeneric<WeaponSlot>(
+      weaponSlotLength ?? Constants.weaponSlotLength,
+    );
   }
 
   late ArrayGeneric<Slot> slots;
@@ -83,9 +85,14 @@ mixin class Inventory {
     if ((slots.currentList[slotNumber]?.resources.currentList ?? []).isEmpty) {
       slots.currentList[slotNumber]?.resources.add(resource);
       resourceAdded = true;
-    } else if (slots.currentList[slotNumber]?.resources.firstElementOrNull.runtimeType ==
+    } else if (slots
+                .currentList[slotNumber]
+                ?.resources
+                .firstElementOrNull
+                .runtimeType ==
             resource.runtimeType &&
-        (slots.currentList[slotNumber]?.resources.listLength ?? 0) < Constants.resourcesLength) {
+        (slots.currentList[slotNumber]?.resources.listLength ?? 0) <
+            Constants.resourcesLength) {
       slots.currentList[slotNumber]?.resources.add(resource);
       resourceAdded = true;
     }

@@ -14,7 +14,8 @@ class ArrayGeneric<T> {
 
   T? get firstElementOrNull => _currentList.firstOrNull;
 
-  UnmodifiableListView<T?> get currentList => UnmodifiableListView(_currentList);
+  UnmodifiableListView<T?> get currentList =>
+      UnmodifiableListView(_currentList);
 
   void add(T? resource) {
     _currentList.add(resource);

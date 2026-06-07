@@ -1,15 +1,21 @@
 name: factorio_oop
-description: A sample command-line application.
+description: A playable 2D factory game prototype inspired by Factorio-style automation.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.4.1
+  sdk: ^3.11.0
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.8.0
+  flame: ^1.37.0
+  flutter:
+    sdk: flutter
 
 dev_dependencies:
-  lints: ^3.0.0
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
   test: ^1.24.0
+
+flutter:
+  uses-material-design: true
